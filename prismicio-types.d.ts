@@ -70,6 +70,7 @@ type ContentRelationshipFieldWithData<
 }[Exclude<TCustomType[number], string>["id"]];
 
 type PageDocumentDataSlicesSlice =
+  | BenefitHrSolutionSectionSlice
   | FeaturedPartnersSlice
   | PartnerSearchSlice
   | PartnersIntroSectionSlice
@@ -146,6 +147,126 @@ export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
 export type AllDocumentTypes = PageDocument;
+
+/**
+ * Item in *Benefit HR Solution Section → Featured Solution → Primary → Bullet Points*
+ */
+export interface BenefitHrSolutionSectionSliceFeaturedSolutionPrimaryBulletsItem {
+  /**
+   * Bullet Text field in *Benefit HR Solution Section → Featured Solution → Primary → Bullet Points*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: benefit_hr_solution_section.featured_solution.primary.bullets[].bullet_text
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  bullet_text: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Benefit HR Solution Section → Featured Solution → Primary*
+ */
+export interface BenefitHrSolutionSectionSliceFeaturedSolutionPrimary {
+  /**
+   * Logo field in *Benefit HR Solution Section → Featured Solution → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: benefit_hr_solution_section.featured_solution.primary.logo
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  logo: prismic.ImageField<never>;
+
+  /**
+   * Headline field in *Benefit HR Solution Section → Featured Solution → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: benefit_hr_solution_section.featured_solution.primary.headline
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  headline: prismic.KeyTextField;
+
+  /**
+   * Supporting Headline field in *Benefit HR Solution Section → Featured Solution → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: benefit_hr_solution_section.featured_solution.primary.supporting_headline
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  supporting_headline: prismic.RichTextField;
+
+  /**
+   * Description field in *Benefit HR Solution Section → Featured Solution → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: benefit_hr_solution_section.featured_solution.primary.description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Bullet Points field in *Benefit HR Solution Section → Featured Solution → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: benefit_hr_solution_section.featured_solution.primary.bullets[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  bullets: prismic.GroupField<
+    Simplify<BenefitHrSolutionSectionSliceFeaturedSolutionPrimaryBulletsItem>
+  >;
+
+  /**
+   * CTA Button Link field in *Benefit HR Solution Section → Featured Solution → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: benefit_hr_solution_section.featured_solution.primary.cta_link
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  cta_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+}
+
+/**
+ * Featured Solution variation for Benefit HR Solution Section Slice
+ *
+ * - **API ID**: `featured_solution`
+ * - **Description**: Displays a featured solution, including image/logo, title, supporting text, bullets, and CTA button.
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type BenefitHrSolutionSectionSliceFeaturedSolution =
+  prismic.SharedSliceVariation<
+    "featured_solution",
+    Simplify<BenefitHrSolutionSectionSliceFeaturedSolutionPrimary>,
+    never
+  >;
+
+/**
+ * Slice variation for *Benefit HR Solution Section*
+ */
+type BenefitHrSolutionSectionSliceVariation =
+  BenefitHrSolutionSectionSliceFeaturedSolution;
+
+/**
+ * Benefit HR Solution Section Shared Slice
+ *
+ * - **API ID**: `benefit_hr_solution_section`
+ * - **Description**: *None*
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type BenefitHrSolutionSectionSlice = prismic.SharedSlice<
+  "benefit_hr_solution_section",
+  BenefitHrSolutionSectionSliceVariation
+>;
 
 /**
  * Item in *Featured Partners → Default → Primary → Partners*
@@ -484,6 +605,11 @@ declare module "@prismicio/client" {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      BenefitHrSolutionSectionSlice,
+      BenefitHrSolutionSectionSliceFeaturedSolutionPrimaryBulletsItem,
+      BenefitHrSolutionSectionSliceFeaturedSolutionPrimary,
+      BenefitHrSolutionSectionSliceVariation,
+      BenefitHrSolutionSectionSliceFeaturedSolution,
       FeaturedPartnersSlice,
       FeaturedPartnersSliceDefaultPrimaryPartnersItem,
       FeaturedPartnersSliceDefaultPrimary,

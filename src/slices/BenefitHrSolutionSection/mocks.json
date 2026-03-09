@@ -1,0 +1,84 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "featured_solution",
+		"primary": {
+			"logo": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
+					"width": 5848,
+					"height": 3899
+				},
+				"url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
+				"width": 5848,
+				"height": 3899,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "chance"
+			},
+			"headline": {
+				"__TYPE__": "FieldContent",
+				"value": "town",
+				"type": "Text"
+			},
+			"supporting_headline": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading4",
+						"content": {
+							"text": "Laugh"
+						}
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "In nisi aliqua in excepteur incididunt consectetur pariatur Lorem quis enim ipsum. Elit id consectetur ad velit incididunt do mollit elit magna sunt elit fugiat aliqua."
+						}
+					}
+				]
+			},
+			"bullets": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"bullet_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "his",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"cta_link": {
+				"__TYPE__": "LinkContent",
+				"key": "904e4a6b-322e-4d32-94ae-a6bf5e76ba65",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "blow"
+				}
+			}
+		},
+		"items": []
+	}
+]

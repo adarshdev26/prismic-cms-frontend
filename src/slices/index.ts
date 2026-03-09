@@ -3,6 +3,9 @@
 import dynamic from "next/dynamic";
 
 export const components = {
+  benefit_hr_solution_section: dynamic(
+    () => import("./BenefitHrSolutionSection"),
+  ),
   featured_partners: dynamic(() => import("./FeaturedPartners")),
   partner_search: dynamic(() => import("./PartnerSearch")),
   partners_intro_section: dynamic(() => import("./PartnersIntroSection")),

@@ -27,6 +27,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "benefit_hr_solution_section": {
+              "type": "SharedSlice"
+            },
             "featured_partners": {
               "type": "SharedSlice"
             },

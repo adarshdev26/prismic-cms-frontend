@@ -1,0 +1,66 @@
+{
+  "type": "SharedSlice",
+  "id": "benefit_hr_solution_section",
+  "name": "Benefit HR Solution Section",
+  "variations": [
+    {
+      "id": "featured_solution",
+      "name": "Featured Solution",
+      "description": "Displays a featured solution, including image/logo, title, supporting text, bullets, and CTA button.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "logo": {
+          "type": "Image",
+          "config": {
+            "label": "Logo"
+          }
+        },
+        "headline": {
+          "type": "Text",
+          "config": {
+            "label": "Headline"
+          }
+        },
+        "supporting_headline": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading4,strong,em",
+            "label": "Supporting Headline"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Description"
+          }
+        },
+        "bullets": {
+          "type": "Group",
+          "config": {
+            "label": "Bullet Points",
+            "fields": {
+              "bullet_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Bullet Text"
+                }
+              }
+            }
+          }
+        },
+        "cta_link": {
+          "type": "Link",
+          "config": {
+            "label": "CTA Button Link",
+            "allowText": true,
+            "repeat": false,
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}
