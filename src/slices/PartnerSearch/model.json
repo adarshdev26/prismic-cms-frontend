@@ -1,0 +1,43 @@
+{
+  "type": "SharedSlice",
+  "id": "partner_search",
+  "name": "Partner Search",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Default slice variation for partner search field.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "label": {
+          "type": "Text",
+          "config": {
+            "label": "Label"
+          }
+        },
+        "placeholder": {
+          "type": "Text",
+          "config": {
+            "label": "Input Placeholder"
+          }
+        },
+        "options": {
+          "type": "Group",
+          "config": {
+            "label": "Autocomplete Options",
+            "fields": {
+              "option_label": {
+                "type": "Text",
+                "config": {
+                  "label": "Option Label"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

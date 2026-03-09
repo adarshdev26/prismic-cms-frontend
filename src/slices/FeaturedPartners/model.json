@@ -1,0 +1,62 @@
+{
+  "type": "SharedSlice",
+  "id": "featured_partners",
+  "name": "Featured Partners",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Standard featured partners with filter and cards grid.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "section_title": {
+          "type": "Text",
+          "config": {
+            "label": "Section Title"
+          }
+        },
+        "filter_type": {
+          "type": "Select",
+          "config": {
+            "label": "Partner Type Filter",
+            "options": [
+              "All Types",
+              "HR Systems",
+              "Payroll",
+              "Benefits",
+              "Other"
+            ]
+          }
+        },
+        "partners": {
+          "type": "Group",
+          "config": {
+            "label": "Partners",
+            "fields": {
+              "category": {
+                "type": "Text",
+                "config": {
+                  "label": "Category"
+                }
+              },
+              "logo": {
+                "type": "Image",
+                "config": {
+                  "label": "Logo"
+                }
+              },
+              "name": {
+                "type": "Text",
+                "config": {
+                  "label": "Partner Name"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

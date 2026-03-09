@@ -1,0 +1,37 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"label": {
+				"__TYPE__": "FieldContent",
+				"value": "bound",
+				"type": "Text"
+			},
+			"placeholder": {
+				"__TYPE__": "FieldContent",
+				"value": "process",
+				"type": "Text"
+			},
+			"options": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"option_label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "create",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

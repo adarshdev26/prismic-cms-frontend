@@ -1,0 +1,46 @@
+{
+  "type": "SharedSlice",
+  "id": "partners_intro_section",
+  "name": "Partners Intro Section",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Heading, description, and button centered on the page.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2,strong,em,hyperlink",
+            "label": "Heading"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Description"
+          }
+        },
+        "buttonText": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text"
+          }
+        },
+        "buttonLink": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "allowText": false,
+            "repeat": false,
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}
